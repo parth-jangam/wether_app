@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <style>
+        body {
+            background-image: url("https://source.unsplash.com/random/200x200?sig=1");
+            background-repeat: no-repeat;
+            background-size: 1600px,2000px;
+        }
+        .container{
+            border:black;
+            margin-left: 500px;
+            margin-top: 70px;
+            padding: 50px;
+            align-items: center;
+            background-color: #fffc10;
+            width: 520px;
+            border-radius: 25px;
+            height: 600px;
+
+        }
+        input{
+            margin: 30px;
+            padding: 10px;
+            width: 350px;
+            border-radius: 15px;
+        }
+        h1{
+            margin-left: 50px;
+            font-weight: bold;
+            color: red;
+            /* border: solid,2px,black; */
+
+        }
+        h3{
+            margin-left: 60px;
+            font-weight: bold;
+            color: red;
+            /* border: solid,2px,black; */
+            
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar bg-light">
+        <form action="/country_code" class="container-fluid justify-content-start">
+          <input onclick="validae()" class="btn btn-outline-success me-2"  type="submit" value="Check your country code">
+          <button class="btn btn-outline-success me-2" type="button">Check your state code</button>
+          
+          <!-- <button class="btn btn-sm btn-outline-secondary" type="button">check your state code</button> -->
+        </form>
+      </nav>
+    <div class="container">
+    <form action="/city" method="post" >
+        <h1>Whether Checker</h1>
+        <h3>check whether of your city</h3>
+        <input type="text" name="city_name" id="" placeholder="Enter the name of your city">
+        <br>
+        <input type="text" name="country_code" placeholder="Enter your country code">
+        <br>
+        <input type="text" name="state_code" placeholder="Enter your state code(fpr USA only)  (optional)">
+        <br>
+        <input type="submit" value="submit" style="width: 200px; margin-left:100px; border-radius: 10px; ">
+    </form>
+    <!-- <a href="" style="text-decoration: none; border:solid 2px black; margin-left:50px; background-color:white">Click here to know your country code</a> -->
+</div>
+<script>
+    function validate(){
+        window.location='/country_code'
+    }
+</script>
+</body>
+</html>
